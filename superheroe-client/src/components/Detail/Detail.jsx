@@ -9,8 +9,12 @@ export default function Detail({children, heroes}) {
     // recuperare l'id dell'eroe dalla url
     const {id} = useParams(); // stringa
 
+    console.log(heroes);
+
     // trovare gli altri dati dell'eroe (heroes, id)
     const hero = heroes ? heroes.find(h => h.id.toString() === id.toString()) : {};
+
+    console.log(hero);
 
     const navigate = useNavigate();
 
